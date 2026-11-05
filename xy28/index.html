@@ -1,1 +1,1775 @@
 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 微信和移动端优化 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <!-- 安卓微信浮窗支持 -->
+    <meta name="applicable-device" content="mobile">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="theme-color" content="#667eea">
+    <!-- 防止微信识别为文件下载 - 多重声明 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- 微信特定优化，防止被识别为文件 -->
+    <meta name="referrer" content="never">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- 明确告诉微信这是网页，不是文件 - 多重声明 -->
+    <meta name="content-type" content="text/html">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <meta name="media-type" content="text/html">
+    <meta name="document-type" content="html">
+    <meta name="mime-type" content="text/html">
+    <meta name="file-type" content="html">
+    <!-- 微信浏览器特定标识 -->
+    <meta name="x5-cache" content="false">
+    <meta name="x5-page-mode" content="app">
+    <meta name="x5-orientation" content="portrait">
+    <!-- 额外声明，确保微信识别为网页 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-itunes-app" content="app-id=">
+    <meta name="apple-mobile-web-app-title" content="">
+    <!-- 微信分享优化 -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <!-- 禁止所有搜索引擎和爬虫抓取 -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, nocache">
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="slurp" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="duckduckbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="baiduspider" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="yisouSpider" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="Sogou" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="360Spider" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="Bytespider" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <!-- 禁止QQ和微信爬虫 -->
+    <meta name="QQBot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="TencentTraveler" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="WeChat" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="MicroMessenger" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <!-- 禁止其他常见爬虫 -->
+    <meta name="spider" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="crawler" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <meta name="bot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* 禁用下拉刷新 */
+            overscroll-behavior-y: none;
+            overscroll-behavior: none;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
+            background: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* 移动端勿垂直居中：键盘弹起时 body 与 .container 高度易不一致，center 会在输入区与键盘之间顶出大块留白 */
+        @media (max-width: 768px) {
+            body {
+                justify-content: flex-start;
+                align-items: stretch;
+            }
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 100%;
+            background: white;
+            border-radius: 0;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            height: 100dvh; /* 动态视口高度，考虑移动端浏览器工具栏 */
+            max-height: 100vh;
+            max-height: 100dvh;
+            position: relative;
+            overflow: hidden;
+            /* 防止键盘弹起时容器滚动 */
+            overscroll-behavior: none;
+            overscroll-behavior-y: none;
+            touch-action: pan-y;
+            /* 键盘弹出时防止头部空白 */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .header h1 {
+            font-size: clamp(18px, 4vw, 24px);
+            margin-bottom: 5px;
+            word-break: break-word;
+        }
+        
+        .header p {
+            font-size: clamp(12px, 2.5vw, 14px);
+            opacity: 0.9;
+            word-break: break-all;
+        }
+        
+        .notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin: 15px;
+            text-align: center;
+            font-size: clamp(12px, 2.5vw, 14px);
+            flex-shrink: 0;
+        }
+        
+        .iframe-wrapper {
+            position: relative;
+            flex: 1;
+            min-height: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            /* 确保点击位置准确 */
+            transform: none;
+            will-change: auto;
+        }
+        
+        /* 重选线路按钮 */
+        .route-change-btn {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 10001;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: move;
+            cursor: grab;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            /* 确保按钮可以正常点击，不影响iframe */
+            pointer-events: auto;
+            touch-action: none;
+            user-select: none;
+            -webkit-user-select: none;
+            overflow: hidden;
+        }
+        
+        /* 折叠状态 - 只显示"选"字 */
+        .route-change-btn.collapsed {
+            padding: 8px 12px;
+            width: auto;
+            min-width: 40px;
+            border-radius: 20px 0 0 20px;
+            /* 默认靠右隐藏，只露出"选"字 */
+            right: 0 !important;
+            left: auto !important;
+            transform: translateX(calc(100% - 40px));
+        }
+        
+        /* 展开状态 - 竖的长方形 */
+        .route-change-btn.expanded {
+            transform: translateX(0);
+            border-radius: 20px;
+            padding: 18px 10px;
+            flex-direction: column;
+            width: auto;
+            min-width: 50px;
+        }
+        
+        .route-change-btn:active {
+            cursor: grabbing;
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+        }
+        
+        .route-change-btn:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #6a3d8f 100%);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+        }
+        
+        .route-change-btn.dragging {
+            opacity: 0.9;
+            cursor: grabbing;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.7);
+            /* 拖动时禁用transition，提升性能 */
+            transition: none !important;
+            will-change: transform, left, top;
+        }
+        
+        /* "选"字图标 */
+        .route-change-btn .select-icon {
+            font-size: 16px;
+            font-weight: 700;
+            white-space: nowrap;
+            display: none;
+            min-width: 20px;
+            text-align: center;
+            line-height: 1;
+        }
+        
+        /* 完整内容（图标+文字） */
+        .route-change-btn .btn-content {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+        
+        /* 展开状态下，内容竖向排列 */
+        .route-change-btn.expanded .btn-content {
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* 折叠状态下隐藏完整内容，显示"选"字 */
+        .route-change-btn.collapsed .btn-content {
+            display: none;
+        }
+        
+        .route-change-btn.collapsed .select-icon {
+            display: inline-block;
+        }
+        
+        /* 展开状态下显示完整内容，隐藏"选"字 */
+        .route-change-btn.expanded .btn-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .route-change-btn.expanded .select-icon {
+            display: none;
+        }
+        
+        .route-change-btn svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+        
+        /* 展开状态下图标稍大一些 */
+        .route-change-btn.expanded svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .route-change-btn span {
+            white-space: nowrap;
+            font-size: 12px;
+        }
+        
+        /* 展开状态下文字稍大一些 */
+        .route-change-btn.expanded span {
+            font-size: 13px;
+        }
+        
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            min-height: 0;
+            background: #f5f5f5;
+            overflow: hidden;
+            /* 确保点击位置准确 - Chrome模拟器优化 */
+            touch-action: pan-x pan-y;
+            /* 确保容器定位准确，不影响点击 */
+            transform: none;
+            will-change: auto;
+            /* 确保容器尺寸准确 */
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* 防止内容溢出导致横向滚动 */
+            max-width: 100%;
+            overflow-x: hidden;
+            /* Chrome模拟器优化 - 确保坐标准确 */
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            border: none;
+            display: block;
+            background: white;
+            overflow: auto;
+            /* 确保 iframe 内容可以完整显示 */
+            -webkit-overflow-scrolling: touch;
+            /* 微信浏览器优化 - 使用absolute定位确保点击位置准确 */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* 确保内容可以滚动 */
+            overscroll-behavior: contain;
+            /* 确保点击位置准确 */
+            pointer-events: auto;
+            touch-action: auto;
+            /* 移除可能影响点击的变换和缩放 */
+            transform: none;
+            will-change: auto;
+            /* 确保iframe尺寸准确 */
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* 确保没有缩放 */
+            zoom: 1;
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .loading-spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .error-message {
+            color: #d32f2f;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .error-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .error-link:hover {
+            background: #5568d3;
+        }
+        
+        .mixed-content-warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .mixed-content-warning h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .mixed-content-warning p {
+            color: #856404;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .mixed-content-warning .solution {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-align: left;
+        }
+        
+        .mixed-content-warning .solution strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .mixed-content-warning .solution ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            color: #666;
+        }
+        
+        .mixed-content-warning .solution li {
+            margin: 5px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 12px;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: clamp(11px, 2vw, 13px);
+            flex-shrink: 0;
+        }
+        
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            html, body {
+                height: 100vh;
+                height: 100dvh;
+            }
+            
+            body {
+                padding: 0;
+            }
+            
+            .container {
+                border-radius: 0;
+                height: 100vh;
+                height: 100dvh;
+                max-height: 100vh;
+                max-height: 100dvh;
+            }
+            
+            .iframe-wrapper {
+                height: 100%;
+            }
+            
+            .iframe-container {
+                height: 100%;
+            }
+            
+            iframe {
+                height: 100%;
+                min-height: 100%;
+            }
+            
+            .loading {
+                padding: 15px 20px;
+                width: 90%;
+                max-width: 300px;
+            }
+            
+            .mixed-content-warning {
+                margin: 15px;
+                padding: 15px;
+            }
+            
+            .mixed-content-warning h3 {
+                font-size: 16px;
+            }
+            
+            .mixed-content-warning p {
+                font-size: 13px;
+            }
+            
+            .mixed-content-warning .solution {
+                padding: 12px;
+                font-size: 12px;
+            }
+        }
+        
+        /* Safari：仅对根节点使用 fill-available；勿对 .container/iframe 设 min-height:-webkit-fill-available，
+           否则键盘弹起时 min-height 仍可能按整屏计算，压过 JS 设置的 height，出现输入框与键盘之间大白条 */
+        @supports (-webkit-touch-callout: none) {
+            html, body {
+                min-height: -webkit-fill-available;
+            }
+        }
+        
+        @supports (-webkit-touch-callout: none) {
+            .iframe-container {
+                min-height: 0;
+            }
+            
+            iframe {
+                min-height: 0;
+            }
+        }
+        
+        /* Chrome 特定优化 */
+        @media screen and (min-width: 769px) {
+            .container {
+                height: 100vh;
+            }
+        }
+        
+        /* 超小屏幕优化 */
+        @media (max-width: 480px) {
+            .loading-text {
+                font-size: 14px;
+            }
+        }
+        
+        /* 横屏模式优化 */
+        @media (orientation: landscape) and (max-height: 500px) {
+            /* 横屏模式特定样式 */
+        }
+        
+        /* 隐藏加载动画 */
+        .loading.hidden {
+            display: none;
+        }
+        
+        /* 线路选择界面 */
+        .route-selector {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 20px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .route-selector.hidden {
+            display: none;
+        }
+        
+        .route-selector-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .route-selector-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .route-selector-header h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .route-selector-header p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .route-section {
+            margin-bottom: 25px;
+        }
+        
+        .route-section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 12px;
+            padding-left: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .route-section:first-child .route-section-title {
+            color: #667eea;
+            font-size: 15px;
+        }
+        
+        .route-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .route-item {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 16px 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .route-item:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        .route-item.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        }
+        
+        .route-item.testing {
+            opacity: 0.85;
+        }
+        
+        .route-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .route-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .route-url {
+            font-size: 12px;
+            color: #999;
+            word-break: break-all;
+        }
+        
+        .route-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 100px;
+            justify-content: flex-end;
+        }
+        
+        .route-latency {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            color: #666;
+        }
+        
+        .route-latency.fast {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .route-latency.medium {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .route-latency.slow {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .route-latency.testing {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .route-latency.error {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .route-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        
+        .route-badge.recommended {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .route-badge.fastest {
+            background: #2196f3;
+            color: white;
+        }
+        
+        .route-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .route-btn {
+            flex: 1;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .route-btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .route-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .route-btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .route-btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .route-btn-secondary {
+            background: #f5f5f5;
+            color: #666;
+        }
+        
+        .route-btn-secondary:hover {
+            background: #e0e0e0;
+        }
+        
+        .route-refresh-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            z-index: 10;
+            overflow: hidden;
+        }
+        
+        .route-refresh-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .route-refresh-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .route-refresh-btn:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #6a3d8f 100%);
+            transform: scale(1.15) rotate(180deg);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        .route-refresh-btn:active {
+            transform: scale(1.05) rotate(180deg);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .route-refresh-btn svg {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s;
+        }
+        
+        .route-refresh-btn.refreshing {
+            animation: spin 1s linear infinite;
+            background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .route-refresh-btn.refreshing:hover {
+            transform: scale(1.15);
+            background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+        }
+        
+        .route-refresh-btn.refreshing svg {
+            animation: spin 1s linear infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .route-selector-content {
+                padding: 20px;
+                border-radius: 15px;
+            }
+            
+            .route-selector-header h2 {
+                font-size: 20px;
+            }
+            
+            .route-item {
+                padding: 14px 16px;
+            }
+            
+            .route-name {
+                font-size: 15px;
+            }
+            
+            .route-url {
+                font-size: 11px;
+            }
+            
+            .route-section {
+                margin-bottom: 20px;
+            }
+            
+            .route-section-title {
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+            
+            .route-latency {
+                font-size: 12px;
+                padding: 3px 10px;
+            }
+            
+            .route-actions {
+                flex-direction: column;
+            }
+            
+            .route-btn {
+                width: 100%;
+            }
+            
+            .route-refresh-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 22px;
+                top: 15px;
+                right: 15px;
+            }
+        }
+        
+        /* 安全检测页面 */
+        .security-check {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }
+        
+        .security-check.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            display: none !important;
+        }
+        
+        .security-check-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 50px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 90%;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .security-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+            }
+        }
+        
+        .security-check-content h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: all 0.5s ease-out;
+        }
+        
+        .security-check-content .subtitle {
+            font-size: 18px;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .security-check-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .security-check-content .hint {
+            font-size: 14px;
+            color: #999;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        /* 检测步骤 */
+        .check-steps {
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .check-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.5s ease-out;
+        }
+        
+        .check-step.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .check-step.completed {
+            opacity: 0.6;
+        }
+        
+        .step-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            flex-shrink: 0;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        
+        .check-step.active .step-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            animation: stepPulse 1s infinite;
+        }
+        
+        .check-step.completed .step-icon {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .check-step.completed .step-icon::before {
+            content: '✓';
+        }
+        
+        @keyframes stepPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
+        .step-text {
+            font-size: 15px;
+            color: #666;
+            flex: 1;
+        }
+        
+        .check-step.active .step-text {
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .check-step.completed .step-text {
+            color: #999;
+        }
+        
+        /* 进度条 */
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.5s ease-out;
+            border-radius: 2px;
+        }
+        
+        .security-icon__check { display: none; }
+        .security-check-content.check-complete .security-icon__shield { display: none; }
+        .security-check-content.check-complete .security-icon__check { display: block; }
+        
+        /* 检测完成状态 */
+        .security-check-content.check-complete .check-steps {
+            max-height: 0;
+            opacity: 0;
+            margin: 0;
+            overflow: hidden;
+            transition: all 0.5s ease-out;
+        }
+        
+        .security-check-content.check-complete .progress-bar {
+            opacity: 0;
+            height: 0;
+            margin: 0;
+            transition: all 0.5s ease-out;
+        }
+        
+        .security-check-content.check-complete .security-icon {
+            background: #4caf50;
+            animation: successPulse 0.6s ease-out;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+        }
+        
+        @keyframes successPulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .security-check-content.check-complete h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #4caf50;
+        }
+        
+        .security-check-content.check-complete .subtitle {
+            display: none;
+        }
+        
+        .security-check-btn {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            transition: all 0.5s ease-out;
+            pointer-events: none;
+        }
+        
+        .security-check-content.check-complete .security-check-btn {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+            padding: 20px 60px;
+            font-size: 20px;
+        }
+        
+        .check-complete-message {
+            font-size: 15px;
+            color: #4caf50;
+            margin-bottom: 25px;
+            font-weight: 500;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease-out 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .check-complete-message::before {
+            content: '✓';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #4caf50;
+            color: white;
+            border-radius: 50%;
+            line-height: 24px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .security-check-content.check-complete .check-complete-message {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 简化后的布局 */
+        .security-check-content.check-complete {
+            padding: 50px 40px;
+        }
+        
+        .security-check-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            animation: buttonPulse 2s infinite;
+        }
+        
+        .security-check-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .security-check-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .security-check-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+        }
+        
+        .security-check-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+        
+        @keyframes buttonPulse {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            }
+            50% {
+                box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+            }
+        }
+        
+        .security-check-btn span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .security-check-content .arrow-hint {
+            display: inline-block;
+            margin-left: 8px;
+            animation: arrowBounce 1.5s infinite;
+        }
+        
+        @keyframes arrowBounce {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .security-check-content {
+                padding: 30px 25px;
+            }
+            
+            .security-check-content.check-complete {
+                padding: 40px 25px;
+            }
+            
+            .security-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+            
+            .security-check-content.check-complete .security-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 40px;
+            }
+            
+            .security-check-content h2 {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+            
+            .security-check-content.check-complete h2 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            
+            .security-check-content p {
+                font-size: 14px;
+                margin-bottom: 25px;
+            }
+            
+            .security-check-content.check-complete .subtitle {
+                font-size: 15px;
+                margin-bottom: 35px;
+            }
+            
+            .security-check-btn {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+            
+            .security-check-content.check-complete .security-check-btn {
+                padding: 16px 40px;
+                font-size: 18px;
+            }
+            
+            .check-complete-message {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 立即输出可见内容，确保微信识别为HTML页面而不是文件 -->
+    <!-- 微信需要立即看到HTML内容才能正确识别 -->
+    <div style="display:none;" id="wechat-html-marker">HTML</div>
+    <!-- JavaScript检测提示（通过JavaScript控制显示） -->
+    <div id="jsWarning" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#f5f5f5;display:none;align-items:center;justify-content:center;z-index:99999;">
+        <div style="text-align:center;padding:40px;background:white;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <h2 style="color:#d32f2f;margin-bottom:20px;">需要启用JavaScript</h2>
+            <p style="color:#666;line-height:1.6;">本页面需要JavaScript支持才能正常访问。</p>
+            <p style="color:#999;font-size:14px;margin-top:20px;">请启用浏览器的JavaScript功能后刷新页面。</p>
+        </div>
+    </div>
+    <!-- 安全检测页面 -->
+    <div id="securityCheck" class="security-check">
+        <div class="security-check-content" id="securityCheckContent">
+            <div class="security-icon"><svg class="security-icon__shield" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"/><path d="M9 12.5l2 2 4-4"/></svg><svg class="security-icon__check" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4L19 7"/></svg></div>
+            <h2>安全检测中</h2>
+            <div class="subtitle" id="checkSubtitle">正在验证访问环境...</div>
+            
+            <div class="check-steps">
+                <div class="check-step" id="step1">
+                    <div class="step-icon">1</div>
+                    <div class="step-text">检测浏览器环境</div>
+                </div>
+                <div class="check-step" id="step2">
+                    <div class="step-icon">2</div>
+                    <div class="step-text">验证安全连接</div>
+                </div>
+                <div class="check-step" id="step3">
+                    <div class="step-icon">3</div>
+                    <div class="step-text">检查访问权限</div>
+                </div>
+                <div class="check-step" id="step4">
+                    <div class="step-icon">4</div>
+                    <div class="step-text">完成安全验证</div>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 线路选择界面 -->
+    <div id="routeSelector" class="route-selector hidden">
+        <button class="route-refresh-btn" id="routeRefreshBtn" title="重新检测延迟">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z" fill="currentColor"/>
+            </svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58 4 4 7.58 4 12C4 16.42 7.58 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69 18 6 15.31 6 12C6 8.69 8.69 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z" fill="currentColor"/>
+            </svg>
+        </button>
+        <div class="route-selector-content">
+            <div class="route-selector-header">
+                <h2>请选择访问线路</h2>
+                <p>如遇打不开大概率是被拦截屏蔽，请尝试其他的线路。</p>
+            </div>
+            <div class="route-section" id="lastSelectedSection" style="display: none;">
+                <div class="route-section-title">上次选择</div>
+                <div class="route-list" id="lastSelectedRouteList">
+                    <!-- 上次选择的线路将显示在这里 -->
+                </div>
+            </div>
+            <div class="route-section" id="otherRoutesSection">
+                <div class="route-section-title">其他线路</div>
+                <div class="route-list" id="routeList">
+                    <!-- 其他线路列表将动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div id="mixedContentWarning" class="mixed-content-warning" style="display: none;">
+            <h3>⚠️ 混合内容安全限制</h3>
+            <p>由于浏览器安全策略，HTTPS 页面无法嵌入 HTTP 内容。</p>
+            <div class="solution">
+                <strong>解决方案：</strong>
+                <ul>
+                    <li>点击下方按钮在新窗口中打开网站（推荐）</li>
+                    <li>或者将页面部署到 HTTP 环境（非 GitHub Pages）</li>
+                    <li>或者为目标服务器配置 HTTPS 证书</li>
+                </ul>
+            </div>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="error-link" id="mixedContentLink" style="margin-top: 15px;">在新窗口中打开网站</a>
+        </div>
+        <div class="iframe-wrapper" id="iframeWrapper">
+            <!-- 重选线路按钮 -->
+            <button class="route-change-btn collapsed" id="routeChangeBtn" title="重选线路（可拖动）" style="display: none;">
+                <!-- 折叠状态显示的"选"字 -->
+                <span class="select-icon">选</span>
+                <!-- 展开状态显示的完整内容 -->
+                <div class="btn-content">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" fill="currentColor"/>
+                    </svg>
+                    <span>重选线路</span>
+                </div>
+            </button>
+            <div class="iframe-container">
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                    <div class="loading-text">加载中...如打不开请右上角选择其他线路</div>
+                </div>
+                <iframe 
+                    id="mainFrame"
+                    title="第三方网站内容"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                    allowfullscreen
+                    sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation allow-modals"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    loading="lazy"
+                    scrolling="yes"
+                    style="overflow: auto; -webkit-overflow-scrolling: touch;">
+                    <p>您的浏览器不支持iframe。请<a href="#" target="_blank" rel="noopener noreferrer" id="fallbackLink">点击这里</a>在新窗口中打开。</p>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    
+<script>
+(function () {
+  'use strict';
+  // ==== 线路配置：全部指向我们自己的前端 H5 ====
+  var H5 = 'https://cnewweb.8848global.cc.cd/';
+  var ROUTES = [
+    { name: '主线路', url: H5 + '?line=1', recommended: true },
+    { name: '备用线路一', url: H5 + '?line=2' },
+    { name: '备用线路二', url: H5 + '?line=3' }
+  ];
+  var KEY = 'x28_last_route_v1';
+  // [frame156] 桌面浏览器进线路时直接加载宽屏 PC 大厅，手机仍加载 H5
+  var IS_MOBILE = /Android|iPhone|iPad|iPod|Windows Phone|HarmonyOS|Mobile|BlackBerry|Opera Mini|IEMobile|MicroMessenger/i.test(navigator.userAgent || '');
+
+  var $ = function (id) { return document.getElementById(id); };
+  var selector = $('routeSelector');
+  var lastSec = $('lastSelectedSection');
+  var lastList = $('lastSelectedRouteList');
+  var list = $('routeList');
+  var wrapper = $('iframeWrapper');
+  var frame = $('mainFrame');
+  var loading = $('loading');
+  var changeBtn = $('routeChangeBtn');
+  var refreshBtn = $('routeRefreshBtn');
+  var mixed = $('mixedContentWarning');
+  var mixedLink = $('mixedContentLink');
+
+  // ---------- 安全检测动画 ----------
+  var steps = [1, 2, 3, 4].map(function (i) { return $('step' + i); });
+  var fill = $('progressFill');
+  var content = $('securityCheckContent');
+  var checkBox = $('securityCheck');
+  var pct = 0;
+  var timer = setInterval(function () {
+    pct = Math.min(100, pct + 5);
+    fill.style.width = pct + '%';
+    steps.forEach(function (el, i) {
+      if (!el) return;
+      el.classList.toggle('active', pct >= i * 25);
+      el.classList.toggle('completed', pct >= (i + 1) * 25);
+    });
+    if (pct >= 100) {
+      clearInterval(timer);
+      if (content) content.classList.add('check-complete');
+      var h2 = content && content.querySelector('h2');
+      if (h2) { h2.textContent = '安全验证'; h2.style.color = '#4caf50'; }
+      var sub = $('checkSubtitle');
+      if (sub) sub.textContent = '正在为您准备访问线路...';
+      setTimeout(function () {
+        if (checkBox) checkBox.classList.add('hidden');
+        if (selector) selector.classList.remove('hidden');
+        renderRoutes();
+        testAll();
+      }, 700);
+    }
+  }, 80);
+
+  // ---------- 线路渲染 ----------
+  // [R211] promo param pass-through: collect query params from entry URL (agent_code etc.),
+  // from both location.search and location.hash, and carry them into the selected route site
+  var INQ = (function () {
+    var out = [], seen = {};
+    function eat(qs) {
+      if (!qs) return;
+      var s = String(qs).split('?').pop().split('#')[0];
+      var parts = s.split('&');
+      for (var i = 0; i < parts.length; i++) {
+        var kv = parts[i];
+        if (!kv) continue;
+        var k = kv.split('=')[0];
+        if (k && !seen[k]) { seen[k] = 1; out.push(kv); }
+      }
+    }
+    eat(location.search);
+    eat(location.hash);
+    return out.length ? out.join('&') : '';
+  })();
+
+  function itemHtml(idx, selected) {
+    var r = ROUTES[idx];
+    var badge = r.recommended ? '<span class="route-badge recommended">推荐</span>' : '';
+    return '<div class="route-item' + (selected ? ' selected' : '') + '" data-idx="' + idx + '">' +
+      '<div class="route-info">' +
+        '<div class="route-name">' + r.name + badge + '</div>' +
+        '<div class="route-url">' + r.url + '</div>' +
+      '</div>' +
+      '<div class="route-status"><span class="route-latency testing">检测中...</span></div>' +
+    '</div>';
+  }
+
+  function getLast() {
+    try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; }
+  }
+
+  function renderRoutes() {
+    var last = getLast();
+    var lastIdx = (last && ROUTES[last.idx]) ? last.idx : -1;
+    if (lastIdx >= 0) {
+      lastSec.style.display = 'block';
+      lastList.innerHTML = itemHtml(lastIdx, true);
+    } else {
+      lastSec.style.display = 'none';
+      lastList.innerHTML = '';
+    }
+    var html = '';
+    for (var i = 0; i < ROUTES.length; i++) {
+      if (i === lastIdx) continue;
+      html += itemHtml(i, false);
+    }
+    list.innerHTML = html || itemHtml(0, false);
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target;
+    while (el && el !== document.body && !el.classList.contains('route-item')) el = el.parentNode;
+    if (!el || el === document.body || !el.classList.contains('route-item')) return;
+    var idx = parseInt(el.getAttribute('data-idx'), 10);
+    if (isNaN(idx) || !ROUTES[idx]) return;
+    select(idx);
+  });
+
+  // ---------- 延迟检测 ----------
+  function testAll() {
+    var items = document.querySelectorAll('.route-item');
+    for (var i = 0; i < items.length; i++) {
+      (function (it) {
+        var idx = parseInt(it.getAttribute('data-idx'), 10);
+        var box = it.querySelector('.route-latency');
+        if (!ROUTES[idx] || !box) return;
+        measure(ROUTES[idx].url).then(function (ms) {
+          box.className = 'route-latency ' + (ms < 100 ? 'fast' : (ms < 300 ? 'medium' : 'slow'));
+          box.textContent = ms + 'ms';
+        }).catch(function () {
+          box.className = 'route-latency error';
+          box.textContent = '无法检测';
+        });
+      })(items[i]);
+    }
+  }
+
+  function measure(url) {
+    return new Promise(function (resolve, reject) {
+      var t0 = performance.now();
+      var done = false;
+      var timer = setTimeout(function () { if (!done) { done = true; reject(new Error('timeout')); } }, 6000);
+      fetch(url + (url.indexOf('?') >= 0 ? '&' : '?') + '_t=' + Date.now(), { mode: 'no-cors', cache: 'no-store' })
+        .then(function () {
+          if (done) return;
+          done = true; clearTimeout(timer);
+          resolve(Math.max(1, Math.round(performance.now() - t0)));
+        })
+        .catch(function (err) {
+          if (done) return;
+          done = true; clearTimeout(timer);
+          reject(err);
+        });
+    });
+  }
+
+  // ---------- 选择线路 ----------
+  function select(idx) {
+    var r = ROUTES[idx];
+    if (!r) return;
+    try { localStorage.setItem(KEY, JSON.stringify({ idx: idx, name: r.name, url: r.url })); } catch (e) {}
+    if (selector) selector.classList.add('hidden');
+
+    var isMixed = location.protocol === 'https:' && /^http:/i.test(r.url);
+    if (isMixed) {
+      if (mixed) mixed.style.display = 'block';
+      if (mixedLink) mixedLink.href = r.url + (INQ ? '#/?' + INQ : '');
+      if (wrapper) wrapper.style.display = 'none';
+    } else {
+      if (mixed) mixed.style.display = 'none';
+      if (wrapper) wrapper.style.display = 'flex';
+      if (loading) loading.style.display = 'flex';
+      var target = r.url;
+      if (!IS_MOBILE) target = H5 + 'static/pc.html?line=' + (idx + 1) + '&_pcv=20261018c';
+      // [R211] pass-through: append promo params on the hash (pc.html carries its own search/hash into the inner H5)
+      if (INQ) {
+        var mark211 = target.indexOf('#') >= 0 ? (target.indexOf('?') >= 0 ? '&' : '?') : '#/?';
+        target += mark211 + INQ;
+      }
+      frame.src = target;
+    }
+    if (changeBtn) {
+      changeBtn.style.display = 'flex';
+      changeBtn.classList.add('collapsed');
+      changeBtn.classList.remove('expanded');
+    }
+  }
+
+  if (frame) {
+    frame.addEventListener('load', function () {
+      if (loading) loading.style.display = 'none';
+    });
+    setTimeout(function () { if (loading) loading.style.display = 'none'; }, 12000);
+  }
+
+  // ---------- 重选 / 刷新 ----------
+  var dragging = false, moved = false, suppressClick = false, sx = 0, sy = 0, ox = 0, oy = 0;
+  function openRouteSelector() {
+    if (selector) selector.classList.remove('hidden');
+    renderRoutes();
+    testAll();
+  }
+  function toggleChangeButton() {
+    // 第一次点击「选」展开为「重选线路」，再次点击进入线路选择页
+    if (changeBtn.classList.contains('collapsed')) {
+      changeBtn.classList.remove('collapsed');
+      changeBtn.classList.add('expanded');
+      return;
+    }
+    if (changeBtn.classList.contains('expanded')) {
+      openRouteSelector();
+      changeBtn.classList.remove('expanded');
+      changeBtn.classList.add('collapsed');
+      return;
+    }
+    openRouteSelector();
+  }
+  if (changeBtn) {
+    changeBtn.addEventListener('pointerdown', function (e) {
+      dragging = true; moved = false; sx = e.clientX; sy = e.clientY;
+      var rect = changeBtn.getBoundingClientRect();
+      ox = rect.left; oy = rect.top;
+      changeBtn.classList.add('dragging');
+      try { changeBtn.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+    document.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var dx = e.clientX - sx, dy = e.clientY - sy;
+      if (Math.abs(dx) + Math.abs(dy) > 12) moved = true;
+      changeBtn.style.left = (ox + dx) + 'px';
+      changeBtn.style.top = (oy + dy) + 'px';
+      changeBtn.style.right = 'auto';
+      changeBtn.style.bottom = 'auto';
+    });
+    document.addEventListener('pointerup', function () {
+      if (!dragging) return;
+      dragging = false;
+      changeBtn.classList.remove('dragging');
+      if (!moved) {
+        toggleChangeButton();
+      }
+      suppressClick = true;
+      setTimeout(function () { suppressClick = false; }, 350);
+    });
+    // 兜底：部分移动端 pointerup 会被拖动手势吞掉，直接点击也进入线路选择
+    changeBtn.addEventListener('click', function () {
+      if (suppressClick) { suppressClick = false; return; }
+      toggleChangeButton();
+    });
+  }
+
+  if (refreshBtn) {
+    refreshBtn.addEventListener('click', function () {
+      refreshBtn.classList.add('refreshing');
+      testAll();
+      setTimeout(function () { refreshBtn.classList.remove('refreshing'); }, 1200);
+    });
+  }
+})();
+
+</script>
+</body>
+</html>
